@@ -68,12 +68,15 @@ function main() {
         {
             test=true;
            console.log("le nombre est trouver");
+           joueur.score=getScore(joueur.level,tentative);
+
         }else {
-            console.log("le nombre n'est pas trouver:");
-            alert("chiffres correct et correctement placé :"+tar[0]+" et "+tar[1]+" chiffres correct et correctement placé :")
+            console.log("le nombre n'est pas trouver");
+            alert("chiffres correct et correctement placé :"+tar[0]+" \n chiffres correct et incorrectement placé :"+tar[1])
         }tentative++;
     }
 
     console.log("Bravo, vous avez devinez ne nombre après "+tentative+" tentatives")
-
+    console.log("Bonjour Nom "+joueur.prenom+", "+joueur.nom+"vous avez choisi le niveau"+joueur.level+ " et bravo vous avez gagné avec\n" +
+        "un score de "+joueur.score)
 }
